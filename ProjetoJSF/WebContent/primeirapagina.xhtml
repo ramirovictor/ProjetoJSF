@@ -4,18 +4,28 @@
 	xmlns:h="http://java.sun.com/jsf/html">
 
 <h:head>
-	<title>olá JSF</title>
+	<title>Olá JSF</title>
 </h:head>
 
 <h:body>
-
-
 	<h:form id="formPessoa">
-	<h1>Olá JSF</h1>
-		<h:inputText id="campoNome" value="#{pessoaBean.nome}"></h:inputText>
-		<h:outputLabel value="Teste jsf" />
-		<br/>
-		<h:commandButton value="Botão"></h:commandButton>
+		<h1>Olá JSF</h1>
+		
+  		Nome:
+		<h:inputText id="campoNome" value="#{pessoaBean.nome}" />
+		<h:inputSecret id="senha" value="#{pessoaBean.senha}" />
+		<h:inputTextarea id="texto" value="#{pessoaBean.texto}" rows="10"
+			cols="20" />
+		<br />
+		<h:commandButton binding="#{pessoaBean.commandButton}"
+			value="Add nome" action="#{pessoaBean.addNome}" />
+
+		<h:dataTable value="#{pessoaBean.nomes}" var="n">
+			<h:column>
+				<h:outputText value="#{n}" />
+			</h:column>
+		</h:dataTable>
+
 	</h:form>
 </h:body>
 </html>
