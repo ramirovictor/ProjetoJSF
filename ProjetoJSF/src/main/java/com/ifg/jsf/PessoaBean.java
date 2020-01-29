@@ -1,73 +1,38 @@
 package com.ifg.jsf;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import javax.faces.bean.ManagedBean;
 import javax.faces.bean.ViewScoped;
-import javax.faces.component.html.HtmlCommandButton;
+
+import com.ifg.dao.DaoGeneric;
+import com.ifg.entidades.Pessoa;
 
 @ViewScoped
 @ManagedBean(name = "pessoaBean")
 public class PessoaBean {
 
-	private String nome;
+	private Pessoa pessoa = new Pessoa();
+	private DaoGeneric<Pessoa> daoGeneric = new DaoGeneric<Pessoa>();
 	
-	private String senha;
-	private String texto;
-
-	private List<String> nomes = new ArrayList<String>();
-	
-	private HtmlCommandButton commandButton;
-	
-	public void setCommandButton(HtmlCommandButton commandButton) {
-		this.commandButton = commandButton;
-	}
-	
-	public HtmlCommandButton getCommandButton() {
-		return commandButton;
-	}
-	
-	public String addNome() {
-		nomes.add(nome);
+	public String salvar() {
+		daoGeneric.salvar(pessoa);
 		
-		if(nomes.size() > 2) {
-			commandButton.setDisabled(true);
-			return "paginanavegada?faces-redirect=true";
-		}
-		return "";// null ou vazio fica na mesma página -> outcome
-	}
-	
-	public void setNomes(List<String> nomes) {
-		this.nomes = nomes;
-	}
-	
-	public List<String> getNomes() {
-		return nomes;
+		return "";
 	}
 
-	public String getNome() {
-		return nome;
+	public Pessoa getPessoa() {
+		return pessoa;
 	}
 
-	public void setNome(String nome) {
-		this.nome = nome;
+	public void setPessoa(Pessoa pessoa) {
+		this.pessoa = pessoa;
 	}
 
-	public String getSenha() {
-		return senha;
+	public DaoGeneric<Pessoa> getDaoGeneric() {
+		return daoGeneric;
 	}
 
-	public void setSenha(String senha) {
-		this.senha = senha;
-	}
-
-	public String getTexto() {
-		return texto;
-	}
-
-	public void setTexto(String texto) {
-		this.texto = texto;
+	public void setDaoGeneric(DaoGeneric<Pessoa> daoGeneric) {
+		this.daoGeneric = daoGeneric;
 	}
 	
 	
