@@ -6,12 +6,14 @@
 
 	<persistence-unit name="ProjetoJSF">
 		<provider>org.hibernate.ejb.HibernatePersistence</provider>
-		<class>com.ifg.entidades.Pessoa</class>
+		<class>br.com.entidades.Pessoa</class>
+		<class>br.com.entidades.Lancamento</class>
+		<class>br.com.entidades.Estados</class>
+		<class>br.com.entidades.Cidades</class>
 
 		<properties>
 			<property name="hibernate.temp.use_jdbc_metadata_defaults"
-				value="false" 
-				 />
+				value="false" />
 			<property name="javax.persistence.jdbc.url"
 				value="jdbc:postgresql://localhost:5432/projetojsf" />
 			<property name="javax.persistence.jdbc.user"

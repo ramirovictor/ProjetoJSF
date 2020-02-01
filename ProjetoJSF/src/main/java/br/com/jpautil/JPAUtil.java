@@ -1,4 +1,4 @@
-package com.ifg.jpautil;
+package br.com.jpautil;
 
 import javax.persistence.EntityManager;
 import javax.persistence.EntityManagerFactory;
