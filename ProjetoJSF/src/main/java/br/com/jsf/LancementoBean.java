@@ -20,7 +20,6 @@ public class LancementoBean {
 
 	private Lancamento lancamento = new Lancamento();
 	private List<Lancamento> lancamentos = new ArrayList<Lancamento>();
-
 	@Inject
 	private DaoGeneric<Lancamento> daoGeneric;
 	

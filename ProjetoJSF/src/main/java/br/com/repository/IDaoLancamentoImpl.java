@@ -11,7 +11,6 @@ import br.com.entidades.Lancamento;
 
 @Named
 public class IDaoLancamentoImpl implements IDaoLancamento {
-	
 	@Inject
 	private EntityManager entityManager;
 

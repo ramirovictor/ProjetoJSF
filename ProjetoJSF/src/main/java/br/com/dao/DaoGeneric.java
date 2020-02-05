@@ -11,7 +11,6 @@ import br.com.jpautil.JPAUtil;
 
 @Named
 public class DaoGeneric<E> {
-
 	private EntityManager entityManager;
 	
 	@Inject

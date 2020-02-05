@@ -34,7 +34,6 @@ public class PessoaBean {
 
 	private Pessoa pessoa = new Pessoa();
 	private List<Pessoa> pessoas = new ArrayList<Pessoa>();
-
 	@Inject
 	private DaoGeneric<Pessoa> daoGeneric;
 

@@ -12,7 +12,6 @@ import javax.persistence.ManyToOne;
 
 @Entity
 public class Cidades implements Serializable {
-
 	/**
 	 * 
 	 */

@@ -16,7 +16,6 @@ import br.com.jpautil.JPAUtil;
 public class EstadoConverter implements Converter, Serializable {
 
 	private static final long serialVersionUID = -628943317877875062L;
-
 	@Override
 	/* Retorna obejto inteiro */
 	public Object getAsObject(FacesContext context, UIComponent component,

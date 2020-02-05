@@ -5,7 +5,6 @@ import javax.persistence.EntityTransaction;
 
 import br.com.entidades.Pessoa;
 import br.com.jpautil.JPAUtil;
-
 public class IDaoPessoaImpl implements IDaoPessoa {
 
 	@Override
